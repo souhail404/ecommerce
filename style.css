@@ -351,23 +351,23 @@ nav{
         padding: 0 5px;
     }
     .nav-container .content .props .prop img{
-        height: 16px;
+        height: 19px;
     }
     .nav-container .content .props .acc{
-        padding: 0 6px;
+        padding: 0 12px;
         margin-left: 6px;
         font-size: 13px;
     }
     .nav-container .content .props .acc-active .logged{
-        width: 20px;
-        height: 20px;
+        width: 22px;
+        height: 22px;
         margin: 5px;
     }
     .nav-container .content .props .cart span{
-        top: 10px;
+        top: 9px;
         right: -2px;
-        width: 13px;
-        height: 13px;
+        width: 15px;
+        height: 15px;
         font-size: 10px;
     }
     
