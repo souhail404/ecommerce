@@ -1,3 +1,5 @@
+
+// mini bar show and hide while scrolling 
 const miniBar = document.getElementById('mini-bar');
 const Nav = document.getElementById('nav');
 
@@ -12,6 +14,7 @@ window.addEventListener('scroll' , () =>{
 })
 
 
+// search bar show and hide
 const searchCancel = document.getElementById('search-cancel');
 const searchIcon = document.getElementById('search-ic');
 const searchBar = document.getElementById('search-bar');
@@ -23,4 +26,26 @@ searchIcon.addEventListener('click' , () =>{
 searchCancel.addEventListener('click' , () =>{
     searchBar.classList.remove('active');
 })
+
+
+
+
+// collection scroll right and left 
+const collectionContainer= document.querySelectorAll('.collection-100');
+
+collectionContainer.forEach(container=>{
+    const moveRight = container.querySelector('.move-right');
+    const moveLeft = container.querySelector('.move-left');
+    const colContent = container.querySelector('.content');
+    
+    moveRight.addEventListener('click' , ()=>{
+        colContent.scrollBy(316, 0);
+    })
+    moveLeft.addEventListener('click' , ()=>{
+        colContent.scrollBy(-316, 0);
+    }) 
+})
+
+
+
 
