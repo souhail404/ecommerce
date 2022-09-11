@@ -64,10 +64,10 @@ collectionContainer.forEach(container=>{
 
     
     moveRight.addEventListener('click' , ()=>{
-        colContent.scrollBy(316, 0);
+        colContent.scrollBy(374, 0);
     })
     moveLeft.addEventListener('click' , ()=>{
-        colContent.scrollBy(-316, 0);
+        colContent.scrollBy(-374, 0);
     }) 
 })
 
