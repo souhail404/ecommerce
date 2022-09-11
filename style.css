@@ -10,8 +10,10 @@
     font-family: 'Poppins' , sans-serif;
 }
 body{
-   height: 300vh;
+   height: 3000vh;
    min-width: 320px;
+   max-width: 1700px;
+   margin: auto;
    padding-top: 120px;
    display: flex;
    flex-direction: column;
@@ -24,7 +26,7 @@ body{
 nav{
     width: 100%;
     background-color: white;
-    box-shadow: 0px 3px 5px #00000055;
+    box-shadow: 0px 3px 5px #0000002a;
     position: fixed;
     top: 0;
     right: 0;
@@ -152,7 +154,7 @@ nav{
     justify-content: space-between;
 }
 #search-bar input{
-    height: 40px;
+    height: 100%;
     border: none;
 }
 #search-bar .sub{
@@ -419,13 +421,110 @@ nav{
 
 
 .banners{
-    aspect-ratio: 16/9;
+    aspect-ratio: 16/4;
     width: 100%;
     max-width: 1700px;
-    background-color: #fad4c0;
-    background: url(images/164.jpg);
+    background-color: #d6d6d6;
+    /* background: url(images/164.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; */
 
+}
+
+@media (max-width:768px) {
+    .banners{
+        aspect-ratio: 16/6;
+    }
+}
+@media (max-width:500px) {
+    .banners{
+        aspect-ratio: 16/9;
+    }
+}
+
+
+
+
+
+.collections{
+    width: 100%;
+    padding: 30px 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 8px;
+}
+.collections .dresses{
+    background:url(images/drss.webp);
+}
+.collections .tops{
+    background:url(images/tp.webp);
+}
+.collections .sandals{
+    background:url(images/snd.jpg);
+}
+.collections .jeans{
+    background:url(images/bottoms.webp);
+}
+.collections .col{
+    width: 100%;
+    /* min-width: 200px; */
+    aspect-ratio: 16/16;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+.collections .col:hover{
+    filter: brightness(0.75);
+}
+.collections .col a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.collections .col a p{
+    font-size: 2.5rem;
+    font-weight: 600;
+    /* -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px); */
+    color: #fad4c0;
+    -webkit-text-stroke: rgb(0, 0, 0) 2px;
+}
+.collections .col a .pop{
+    font-size: 1rem;
+    font-weight: 300;
+    background-color: rgba(0, 0, 0, 0.651);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fad4c0;
+    transform: translateY(105%);
+    transition: transform 0.3s ease;
+}
+.collections .col:hover a .pop{
+    transform: translateY(0%);
+}
+
+@media (max-width:992px) {
+    .collections{
+        grid-template-columns: 1fr 1fr ;
+        grid-gap: 8px;
+    }
+}
+@media (max-width:600px) {
+    .collections{
+        grid-template-columns: 1fr ;
+        grid-gap: 10px;
+        padding: 30px 10px;
+    }
 }
