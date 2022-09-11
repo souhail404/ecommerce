@@ -54,7 +54,7 @@ collectionContainer.forEach(container=>{
         else{
             moveLeft.style.display = 'flex';
         }
-        if(rightp == 0){
+        if( rightp < 1){
             moveRight.style.display = 'none';
         }
         else{
