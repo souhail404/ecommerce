@@ -533,7 +533,7 @@ nav{
 .collection{
     width: 100%;
     padding: 50px 16px;
-
+    position: relative;
 }
 .collection .header{
     width: 100%;
@@ -567,7 +567,6 @@ nav{
     display: flex;
     overflow-x: scroll;
     scroll-behavior: smooth;
-    position: relative;
 }
 .collection .content::-webkit-scrollbar{
     display: none;
@@ -575,7 +574,6 @@ nav{
 .collection .content .products-container{
     height: 100%;
     display: flex;
-
 }
 
 .collection .content .products-container .product{
@@ -596,15 +594,14 @@ nav{
     width: 30px;
     height: 30px;
     top: 50%;
-    transform: translateY(-50%);
     cursor: pointer;
 
 }
 .collection .content .products-container .move-left{
-    left: 0;
+    left: 16px;
 }
 .collection .content .products-container .move-right{
-    right: 0;
+    right: 16px;
 }
 .collection .content .products-container .move img{
     height: 100%;
