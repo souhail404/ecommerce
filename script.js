@@ -38,6 +38,31 @@ collectionContainer.forEach(container=>{
     const moveLeft = container.querySelector('.move-left');
     const colContent = container.querySelector('.content');
     
+    
+    let rightp = colContent.scrollWidth - colContent.scrollLeft - colContent.clientWidth;
+    if(colContent.scrollLeft == 0){
+        moveLeft.style.display = 'none';
+    }
+    if(rightp == 0){
+        moveRight.style.display = 'none';
+    }
+    colContent.addEventListener('scroll' , ()=>{
+        rightp = colContent.scrollWidth - colContent.scrollLeft - colContent.clientWidth;
+        if(colContent.scrollLeft == 0){
+            moveLeft.style.display = 'none';
+        }
+        else{
+            moveLeft.style.display = 'flex';
+        }
+        if(rightp == 0){
+            moveRight.style.display = 'none';
+        }
+        else{
+            moveRight.style.display = 'flex';
+        }
+    })
+
+    
     moveRight.addEventListener('click' , ()=>{
         colContent.scrollBy(316, 0);
     })
