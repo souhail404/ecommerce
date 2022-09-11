@@ -431,7 +431,6 @@ nav{
     background-position: center; */
 
 }
-<<<<<<< HEAD
 
 @media (max-width:768px) {
     .banners{
@@ -448,26 +447,26 @@ nav{
 
 
 
-.collections{
+.col-menu{
     width: 100%;
     padding: 30px 16px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 8px;
 }
-.collections .dresses{
+.col-menu .dresses{
     background:url(images/drss.webp);
 }
-.collections .tops{
+.col-menu .tops{
     background:url(images/tp.webp);
 }
-.collections .sandals{
+.col-menu .sandals{
     background:url(images/snd.jpg);
 }
-.collections .jeans{
+.col-menu .jeans{
     background:url(images/bottoms.webp);
 }
-.collections .col{
+.col-menu .col{
     width: 100%;
     /* min-width: 200px; */
     aspect-ratio: 16/16;
@@ -477,10 +476,10 @@ nav{
     position: relative;
     overflow: hidden;
 }
-.collections .col:hover{
+.col-menu .col:hover{
     filter: brightness(0.75);
 }
-.collections .col a{
+.col-menu .col a{
     width: 100%;
     height: 100%;
     display: flex;
@@ -488,7 +487,7 @@ nav{
     justify-content: center;
     
 }
-.collections .col a p{
+.col-menu .col a p{
     font-size: 2.5rem;
     font-weight: 600;
     /* -webkit-backdrop-filter: blur(1px);
@@ -496,7 +495,7 @@ nav{
     color: #fad4c0;
     -webkit-text-stroke: rgb(0, 0, 0) 2px;
 }
-.collections .col a .pop{
+.col-menu .col a .pop{
     font-size: 1rem;
     font-weight: 300;
     background-color: rgba(0, 0, 0, 0.651);
@@ -512,22 +511,104 @@ nav{
     transform: translateY(105%);
     transition: transform 0.3s ease;
 }
-.collections .col:hover a .pop{
+.col-menu .col:hover a .pop{
     transform: translateY(0%);
 }
 
 @media (max-width:992px) {
-    .collections{
+    .col-menu{
         grid-template-columns: 1fr 1fr ;
         grid-gap: 8px;
     }
 }
 @media (max-width:600px) {
-    .collections{
+    .col-menu{
         grid-template-columns: 1fr ;
         grid-gap: 10px;
         padding: 30px 10px;
     }
 }
-=======
->>>>>>> 7f1fe435b2abce8342d00dc23ba69719ef156772
+
+
+.collection{
+    width: 100%;
+    padding: 50px 16px;
+
+}
+.collection .header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.collection .header .header-txt{
+    font-size: 2rem;
+    font-weight: 600;
+    color: black;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+.collection .header .header-txt  span{
+    display: block;
+    width: 40px;
+    height: 2px ;
+    background-color: black;
+    margin-left: 16px;
+    transition: all 0.3s ease;
+}
+.collection .header .header-txt:hover span{
+    width: 100px;
+}
+.collection .content{
+    width: 100%;
+    height: 440px;
+    margin-top: 16px;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    position: relative;
+}
+.collection .content::-webkit-scrollbar{
+    display: none;
+}
+.collection .content .products-container{
+    height: 100%;
+    display: flex;
+
+}
+
+.collection .content .products-container .product{
+    display: block;
+    width: 300px;
+    height: 100%;
+    margin: 0 16px;
+    margin-left: 0;
+    background-color: #d6d6d6;
+}
+
+.collection .content .products-container .product:last-child{
+    margin-right: 0;
+}
+
+.collection .content .products-container .move{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+}
+.collection .content .products-container .move-left{
+    left: 0;
+}
+.collection .content .products-container .move-right{
+    right: 0;
+}
+.collection .content .products-container .move img{
+    height: 100%;
+}
+.collection .content .products-container .move-left img{
+    transform: rotate(180deg);
+}
