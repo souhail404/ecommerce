@@ -12,7 +12,7 @@
 body{
    height: 3000vh;
    min-height: 580px;
-   min-width: 320px;
+   min-width: 340px;
    max-width: 1700px;
    margin: auto;
    padding-top: 120px;
@@ -839,6 +839,7 @@ nav{
 }
 #product-info  .info-content .choose{
     display: flex;
+    
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
@@ -850,6 +851,7 @@ nav{
 }
 #product-info  .info-content .choose div{
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     margin-top: 8px;
 }
@@ -862,6 +864,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 4px;
 }
 #product-info  .info-content .choose .choose-item:not(:first-child) {
     margin-left: 16px;
@@ -975,15 +978,47 @@ nav{
     }
     #product-info .container .images-wrp .main-image-phone .image-container{
         display: flex;
+        flex-wrap: nowrap;
     }
     #product-info .container .images-wrp .main-image-phone .image-container img{
-        max-width: 250px;
+        max-height: 500px;
+        margin: 0 4px;
+    }
+    #product-info  .info-content .name p{
+        font-size: 18px;
+        font-weight: 600;
+    }
+    #product-info  .info-content .price{
+        margin-bottom: 12px;
+    }
+    #product-info  .info-content .price .f-price{
+        margin-left: 8px;
+    }
+    #product-info  .info-content .price p{
+        font-size: 18px;
+        font-weight: 500;  
+    }
+    #product-info  .info-content .choose p{
+        font-size: 18px;  
+    }
+    #product-info  .info-content .choose .choose-item {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+    #product-info  .info-content .choose .choose-item:not(:first-child) {
+        margin-left: 16px;
+    }
+    #product-info  .info-content .call-ta .btn{
+        margin-top: 12px;
+        height: 38px;
+        font-size: 16px;
     }
 }
 
 
 /* ------ */
-@media (max-height:620px) {
+@media (max-height:620px ) and (min-width :600px) {
     #product-info .container .info{
         transform: scale(0.8 , 0.8) translateY(-40px);
         position: sticky;
